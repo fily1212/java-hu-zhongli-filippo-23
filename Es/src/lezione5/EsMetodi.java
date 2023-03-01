@@ -4,14 +4,25 @@ public class EsMetodi {
     /** metodo dado() che restituisce un numero da 1 a 6. Usare la classe Random
      * @return      int da 1 a 6
      */
+    public static int dado(){
+        return 0;
+    }
+
+
 
     /**
      * metodo tuttiPari(int n) che chiede n numeri e ritorna true se sono tutti pari
      * non usare array (non memorizzare i numeri)
-     * @param   n   quanti numeri chiedere
+     * @param n quanti numeri chiedere
      * @return      true se tutti i numeri chiesti sono pari, altrimenti false
      */
 
+    public static String soloVocali(String s){
+
+
+
+        return "";
+    }
     /**
     * metodo soloVocali(String s) che restituisce le vocali della stringa
      * esempio: "Ciao come stai?" -> "iaooeai"
