@@ -1,10 +1,12 @@
 package lezione5;
 
+import util.Util;
+
 import java.util.Scanner;
 
 public class EsArray {
 
-
+/*
     public static void main(String[] args) {
         int lunghezza = 5;
         int[] a = new int[lunghezza];
@@ -22,5 +24,9 @@ public class EsArray {
         String[] stringhe = new String[4];
 
 
+    }*/
+
+    public static void main(String[] args) {
+        int[] a = Util.crea(3);
     }
 }
