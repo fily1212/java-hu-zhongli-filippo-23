@@ -5,7 +5,6 @@ public class EsMetodi {
      * @return      int da 1 a 6
      */
 
-
     /**
      * metodo tuttiPari(int n) che chiede n numeri e ritorna true se sono tutti pari
      * non usare array (non memorizzare i numeri)
