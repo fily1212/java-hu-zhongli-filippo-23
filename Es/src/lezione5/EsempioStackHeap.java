@@ -14,7 +14,6 @@ public class EsempioStackHeap {
         System.out.println(n);
     }
     */
-
     // SI perché i parametri sono diversi
     public static int m1(double n){
         return (int)n;

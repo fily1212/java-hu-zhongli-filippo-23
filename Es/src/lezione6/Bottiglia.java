@@ -1,2 +1,6 @@
-package lezione6;public class Bottiglia {
+package lezione6;
+
+public class Bottiglia {
+    int capacita;
+    int quantita;
 }

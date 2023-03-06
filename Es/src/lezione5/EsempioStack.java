@@ -1,5 +1,4 @@
 package lezione5;
-
 public class EsempioStack {
     public static int doppio(int n){
         return n*2;
