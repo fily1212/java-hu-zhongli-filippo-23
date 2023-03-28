@@ -67,8 +67,12 @@ public class BibliotecaController {
                             int idLibro){
         Utente u = utenteRepository.findById(idUtente);
         Libro l = libroRepository.findById(idLibro);
-        Prestito p = new Prestito(u,l);
-        prestitoRepository.save(p);
+        if(l.getStato() != Libro.Stato.IN_PRESTITO){
+            l.setStato(Libro.Stato.IN_PRESTITO);
+            libroRepository.save(l);
+            Prestito p = new Prestito(u,l);
+            prestitoRepository.save(p);
+        }
 
         return "OK";
 

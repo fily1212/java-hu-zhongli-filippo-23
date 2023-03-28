@@ -15,7 +15,7 @@ public class Libro {
     private int id;
     private Stato stato;
 
-    enum Stato{
+    public enum Stato{
         DISPONIBILE, IN_PRESTITO
     }
 
