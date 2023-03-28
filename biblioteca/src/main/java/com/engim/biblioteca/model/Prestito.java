@@ -1,13 +1,22 @@
 package com.engim.biblioteca.model;
 
+import org.hibernate.annotations.GeneratorType;
+
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
 public class Prestito {
     private Date dataInizio;
     private Date dataFine;
-    private Utente utente;
-    private Libro libro;
 
+    @ManyToOne
+    private Utente utente;
+    @ManyToOne
+    private Libro libro;
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private int id;
     public Prestito() {
     }
 

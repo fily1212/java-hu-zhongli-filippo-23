@@ -2,8 +2,10 @@ package com.engim.biblioteca.controller;
 
 
 import com.engim.biblioteca.model.Libro;
+import com.engim.biblioteca.model.Prestito;
 import com.engim.biblioteca.model.Utente;
 import com.engim.biblioteca.repository.LibroRepository;
+import com.engim.biblioteca.repository.PrestitoRepository;
 import com.engim.biblioteca.repository.UtenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +22,9 @@ public class BibliotecaController {
 
     @Autowired
     UtenteRepository utenteRepository;
+
+    @Autowired
+    PrestitoRepository prestitoRepository;
 
     @GetMapping("/addLibro")
     public String addLibro(@RequestParam(value = "titolo")
@@ -53,6 +58,20 @@ public class BibliotecaController {
             @RequestParam(value="id")
             int id){
         return libroRepository.findById(id);
+    }
+
+    @GetMapping("/addPrestito")
+    public String addPrestito(@RequestParam(value = "idUtente")
+                            int idUtente,
+                            @RequestParam(value = "idLibro")
+                            int idLibro){
+        Utente u = utenteRepository.findById(idUtente);
+        Libro l = libroRepository.findById(idLibro);
+        Prestito p = new Prestito(u,l);
+        prestitoRepository.save(p);
+
+        return "OK";
+
     }
 
 
