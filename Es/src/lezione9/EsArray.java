@@ -20,7 +20,7 @@ public class EsArray {
             System.out.println(s.substring(0,1));
         }
 
-        \Map<String,String> rubrica = new HashMap<>();
+        Map<String,String> rubrica = new HashMap<>();
         rubrica.put("Franco","01123456789");
         System.out.println(rubrica.get("Franco"));
 

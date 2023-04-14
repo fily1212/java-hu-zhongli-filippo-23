@@ -1,9 +1,13 @@
 package com.engim.verificasimulazione;
 
 public class Controller {
+
+    private static Sorteggio sorteggio = new Sorteggio();
+
+
     /*
-    * ES 1: get ("/add?nome=n") che aggiunge un nome n per il sorteggio (utilizzare la classe Sorteggio) 20 p
-    * ES 2: get ("/sorteggia?num=n") che restituisce n numeri casuali (utilizzare la classe Sorteggio) 20 p
+    * ES 1: get ("/add?nome=n") che aggiunge un nome n per il sorteggio (utilizzare la classe Sorteggio) 15 p
+    * ES 2: get ("/sorteggia?num=n") che restituisce n nomi casuali (utilizzare la classe Sorteggio) 20 p
     * ES 3: get ("/listaNomi?sottostringa=s") che restituisce la lista dei nomi che contengono la sottostringa s 20 p
     * ES 4: creare la classe SorteggioRuolo in cui, dopo aver aggiunto i nomi ("/add?nome=n"),
     * sorteggia per ogni nome un ruolo di Lupus (get: "/sorteggia")
@@ -17,6 +21,7 @@ public class Controller {
     * 15: + 1 INDEMONIATO
     * Non consente l'aggiunta di più di 15 giocatori.
     * creare get ("/getRuoli") che restituisce tutti i ruoli e get ("getRuolo?nome=n")
-    * che restituisce il ruolo del singolo giocatore  25 p
+    * che restituisce il ruolo del singolo giocatore  30 p
     * */
+
 }

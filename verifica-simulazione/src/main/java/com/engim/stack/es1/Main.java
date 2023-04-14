@@ -8,10 +8,10 @@ public class Main {
         b.inverti();
         b.decrement();
         a.decrement();
-//        a.inverti();
+       // a.inverti();
         a.increment();
         b.inverti();
-//        I i = new I();
+       // I i = new I();
         a.increment();
         a.increment();
         I i = a;
