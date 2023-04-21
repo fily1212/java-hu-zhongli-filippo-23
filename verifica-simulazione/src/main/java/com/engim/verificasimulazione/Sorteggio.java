@@ -18,6 +18,7 @@ public class Sorteggio {
         if(daMischiare){
             Collections.shuffle(nomi);
             daMischiare = false;
+            nextName = 0;
         }
         if(nextName >= nomi.size())
             throw new IndexOutOfBoundsException("Nomi finiti");

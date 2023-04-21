@@ -1,9 +1,42 @@
 package com.engim.verificasimulazione;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@RestController
 public class Controller {
 
     private static Sorteggio sorteggio = new Sorteggio();
 
+    // ES1
+    @GetMapping(value="/add")
+    public void aggiungiNome(@RequestParam(value="nome")String nome){
+        sorteggio.aggiungi(nome);
+    }
+
+    @GetMapping("/sorteggia")
+    public List<String> sorteggia(@RequestParam(value="num") int n){
+        List<String> nomi = new ArrayList<>();
+        for(int i = 0; i<n; i++){
+            nomi.add(sorteggio.next());
+        }
+        return nomi;
+    }
+
+    @GetMapping("/listaNomi")
+    public List<String> listaNomi(@RequestParam(value="sottostringa") String s){
+        List<String> nomiConS = new ArrayList<>();
+        List<String> nomi = sorteggio.getNomi();
+        for(String nome : nomi){
+            if(nome.contains(s))
+                nomiConS.add(nome);
+        }
+        return nomiConS;
+    }
 
     /*
     * ES 1: get ("/add?nome=n") che aggiunge un nome n per il sorteggio (utilizzare la classe Sorteggio) 15 p
